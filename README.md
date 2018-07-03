@@ -23,7 +23,7 @@ $ yarn install
 $ yarn start
 ```
 
-The CORS proxy will run on port 5000. The app server will be available
+The CORS proxy will run on port 8080. The app server will be available
 at http://localhost:3000/ .
 
 ## Deployment
