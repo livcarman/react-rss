@@ -1,0 +1,26 @@
+.StoryItem {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.StoryItem:last-child {
+  border-bottom: none;
+  margin-bottom: 5px;
+}
+
+.StoryItem__time {
+  display: block;
+  color: #595959;
+  font-size: 0.75em;
+  line-height: 1.1em;
+}
+
+.StoryItem__title {
+  font-size: 0.875em;
+  line-height: 1;
+}
+
+.StoryItem__title a {
+  color: #4981a6;
+  text-decoration: none;
+}

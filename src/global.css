@@ -1,0 +1,40 @@
+/**
+ * Include an element's `padding` and `border` when calculating its `width`
+ */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/**
+ * Set default background color and text styles
+ */
+body {
+  background-color: #e6e6e6;
+  color: #000;
+  font-family: -apple-system,
+               BlinkMacSystemFont,
+               "Segoe UI",
+               Roboto,
+               Oxygen-Sans,
+               Cantarell,
+               Ubuntu,
+               "Helvetica Neue",
+               Helvetica,
+               Arial,
+               sans-serif;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.5em;
+}
+
+/**
+ * Allows the use of flexbox to center content vertically
+ */
+html,
+body,
+#root {
+  height: 100%;
+}

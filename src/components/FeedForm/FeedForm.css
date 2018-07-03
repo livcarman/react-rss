@@ -1,0 +1,62 @@
+/**
+ * Wrapper
+ */
+.FeedForm {
+  width: 100%;
+}
+
+.FeedForm p {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+/**
+ * Labels (for screen readers -- hide them accessibly)
+ */
+.FeedForm label {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/**
+ * Form Inputs
+ */
+.FeedForm input {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  display: block;
+  font-size: 0.875em;
+  line-height: 1.1;
+  padding: 0.5em 0.75em;
+  width: 100%;
+}
+
+.FeedForm input:focus {
+  border-color: #6fb4ff;
+  outline: 0;
+  box-shadow: 0 0 0 .2rem rgba(111,180,255,.25);
+}
+
+.FeedForm__button {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  cursor: pointer;
+  display: block;
+  font-size: 0.875em;
+  line-height: 1.1;
+  padding: 0.5em 0.75em;
+  width: 100%;
+}
+
+.FeedForm__button:hover,
+.FeedForm__button:focus {
+  background-color: #ddd;
+}

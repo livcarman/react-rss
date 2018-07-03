@@ -1,0 +1,20 @@
+/**
+ * Wrapper
+ */
+.FeedStories {
+  margin-bottom: 1.5em;
+}
+
+.FeedStories__title {
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+
+.FeedStories__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

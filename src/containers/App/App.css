@@ -1,0 +1,16 @@
+/**
+ * Allows the use of flexbox to center content vertically
+ */
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.App .Header {
+  flex: none;
+}
+
+.App main {
+  flex: 1 0 auto;
+}

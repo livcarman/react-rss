@@ -1,0 +1,27 @@
+/**
+ * Wrapper element, which controls the layout
+ */
+.FeedPage {
+  max-width: 60em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+@media (min-width: 60em) {
+  .FeedPage {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .FeedPage .FeedList {
+    flex: 1 0 25%;
+    align-self: flex-start;
+  }
+
+  .FeedPage .StoryList {
+    flex: 1 0 75%;
+    margin-left: 1em;
+  }
+}

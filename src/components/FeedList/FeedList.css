@@ -1,0 +1,39 @@
+/**
+ * The wrapper element, which controls the layout.
+ */
+.FeedList {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-width: 20em;
+  margin-bottom: 1.5em;
+  overflow-x: auto;
+  padding: 1.5em 1em;
+}
+
+/**
+ * Title
+ */
+.FeedList__title,
+.FeedList__subtitle {
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+
+.FeedList__subtitle {
+  font-size: 0.875em;
+}
+
+
+/**
+ * List
+ */
+.FeedList__list {
+  list-style: none;
+  margin: 0;
+  margin-bottom: 1.5em;
+  padding: 0;
+}

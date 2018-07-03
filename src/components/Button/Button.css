@@ -1,0 +1,19 @@
+/**
+ * Prepend the button text with an icon
+ */
+.Button__icon {
+  display: flex;
+}
+
+.Button__icon .Button__img,
+.Button__icon svg {
+  flex: none;
+  height: 1em;
+  position: relative;
+  top: 2px;
+  width: 1em;
+}
+
+.Button__icon span {
+  flex: 1;
+}

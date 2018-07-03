@@ -1,0 +1,10 @@
+/**
+ * Wrapper element
+ */
+.StoryList {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1.5em;
+  padding: 1.5em 1em;
+}
