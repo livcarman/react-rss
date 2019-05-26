@@ -18,12 +18,14 @@
 .FeedItem__desc {
   display: block;
   margin-bottom: 0.75em;
+  word-break: break-word;
 }
 
 .FeedItem__title {
   display: block;
   font-size: 0.85em;
   font-weight: bold;
+  word-break: break-word;
 }
 
 .FeedItem__url {
@@ -31,6 +33,7 @@
   color: #595959;
   font-size: 0.75em;
   line-height: 1.1;
+  word-break: break-word;
 }
 
 /**
