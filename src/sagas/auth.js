@@ -3,7 +3,7 @@
  */
 
 import { call, fork, put, take } from 'redux-saga/effects';
-import { push } from 'react-router-redux';
+import { push } from 'connected-react-router';
 
 import { authActions } from '../actions';
 import { firebaseAuth } from '../firebase';

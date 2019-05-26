@@ -1,4 +1,4 @@
-"use strict";
+/* eslint-disable no-unused-vars */
 const http = require('http');
 const https = require('https');
 const xml2js = require('xml2js');

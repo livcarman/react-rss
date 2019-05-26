@@ -6,8 +6,8 @@
  * See: https://caniuse.com/#feat=history
  */
 
-import createHistory from 'history/createBrowserHistory';
+import { createBrowserHistory } from 'history';
 
-export default createHistory({
+export default createBrowserHistory({
   basename: '/'
 });

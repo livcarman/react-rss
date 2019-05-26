@@ -11,12 +11,12 @@
  */
 
 import { combineReducers } from 'redux';
-import { routerReducer } from 'react-router-redux';
+import { connectRouter } from 'connected-react-router';
 
 import { authReducer, feedReducer } from './reducers';
 
-export default combineReducers({
+export default history => combineReducers({
   auth: authReducer,
   feeds: feedReducer,
-  routing: routerReducer,
+  router: connectRouter(history),
 });
