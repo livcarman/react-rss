@@ -1,0 +1,41 @@
+.LoadingIndicator {
+    height: 100%;
+    margin: auto;
+    opacity: 1;
+    position: relative;
+    transition: opacity linear 0.1s;
+}
+
+.LoadingIndicator::before {
+    animation: 2s linear infinite spinner;
+    border: solid 3px #fff;
+    border-bottom-color: #000;
+    border-radius: 50%;
+    content: "";
+    height: 40px;
+    left: 50%;
+    opacity: inherit;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    transform-origin: center;
+    width: 40px;
+    will-change: transform;
+}
+
+@keyframes spinner {
+    0% {
+        transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+    100% {
+         transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    }
+}
+
+/* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+.LoadingIndicator__screen-reader-txt {
+    position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}

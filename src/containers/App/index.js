@@ -4,19 +4,21 @@
  */
 
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-import FeedPage from '../FeedPage';
 import Header from '../../components/Header';
+import LoadingIndicator from '../../components/LoadingIndicator';
 import RequireAnonRoute from '../../components/RequireAnonRoute';
 import RequireUserRoute from '../../components/RequireUserRoute';
-import SignInPage from '../SignInPage';
 import { authActions } from '../../actions';
 import { getAuth } from '../../reducers';
 
 import './App.css';
+
+const FeedPage = lazy(() => import('../FeedPage'));
+const SignInPage = lazy(() => import('../SignInPage'));
 
 const App = ({authenticated, signOut}) => (
   <div className="App">
@@ -25,17 +27,19 @@ const App = ({authenticated, signOut}) => (
       signOut={signOut}
     />
     <main>
-      <RequireUserRoute
-        authenticated={authenticated}
-        exact
-        path="/"
-        component={FeedPage}
-      />
-      <RequireAnonRoute
-        authenticated={authenticated}
-        path="/sign-in"
-        component={SignInPage}
-      />
+      <Suspense fallback={<LoadingIndicator/>}>
+        <RequireUserRoute
+          authenticated={authenticated}
+          exact
+          path="/"
+          component={FeedPage}
+        />
+        <RequireAnonRoute
+          authenticated={authenticated}
+          path="/sign-in"
+          component={SignInPage}
+        />
+      </Suspense>
     </main>
   </div>
 );
