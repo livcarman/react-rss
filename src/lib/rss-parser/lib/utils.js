@@ -1,6 +1,7 @@
-const utils = module.exports = {};
-const entities = require('entities');
-const xml2js = require('xml2js');
+import entities from 'entities';
+import xml2js from 'xml2js';
+
+const utils = {};
 
 utils.stripHtml = function(str) {
   return str.replace(/<(?:.|\n)*?>/gm, '');
@@ -74,3 +75,5 @@ utils.getEncodingFromContentType = function(contentType) {
   }
   return encoding;
 }
+
+export default utils;

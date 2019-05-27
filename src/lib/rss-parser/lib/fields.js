@@ -1,4 +1,4 @@
-const fields = module.exports = {};
+const fields = {};
 
 fields.feed = [
   ['author', 'creator'],
@@ -69,3 +69,4 @@ fields.podcastItem = ([
   'keywords',
 ]).map(mapItunesField);
 
+export default fields;

@@ -1,1 +1,2 @@
-window.RSSParser = require('./index');
+import RSSParser from './index';
+window.RSSParser = RSSParser;

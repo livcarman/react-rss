@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
-const http = require('http');
-const https = require('https');
-const xml2js = require('xml2js');
-const url = require('url');
+import http from 'http';
+import https from 'https';
+import xml2js from 'xml2js';
+import url from 'url';
 
-const fields = require('./fields');
-const utils = require('./utils');
+import fields from './fields';
+import utils from './utils';
 
 const DEFAULT_HEADERS = {
   'User-Agent': 'rss-parser',
@@ -245,4 +245,4 @@ class Parser {
   }
 }
 
-module.exports = Parser;
+export default Parser;

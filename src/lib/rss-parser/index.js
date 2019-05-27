@@ -1,2 +1,3 @@
-module.exports = require('./lib/parser');
+import parser from './lib/parser';
+export default parser;
 
