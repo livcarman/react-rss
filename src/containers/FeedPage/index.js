@@ -12,19 +12,20 @@ import { withRouter } from 'react-router-dom';
 import FeedList from '../../components/FeedList';
 import StoryList from '../../components/StoryList';
 import { feedActions } from '../../actions';
-import { getFeedList } from '../../reducers';
+import { feedsLoading, getFeedList } from '../../reducers';
 
 import './FeedPage.css';
 
-const FeedPage = ({ createFeed, deleteFeed, feeds, refreshFeed }) => (
+const FeedPage = ({ createFeed, deleteFeed, feeds, feedsLoading, refreshFeed }) => (
   <div className="FeedPage">
     <FeedList
       createFeed={createFeed}
       deleteFeed={deleteFeed}
       feeds={feeds}
+      feedsLoading={feedsLoading}
       refreshFeed={refreshFeed}
     />
-    <StoryList feeds={feeds} />
+    <StoryList feeds={feeds} feedsLoading={feedsLoading} />
   </div>
 );
 
@@ -32,11 +33,13 @@ FeedPage.propTypes = {
   createFeed: PropTypes.func.isRequired,
   deleteFeed: PropTypes.func.isRequired,
   feeds: PropTypes.instanceOf(List),
+  feedsLoading: PropTypes.bool,
   refreshFeed: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
-  feeds: getFeedList(state)
+  feeds: getFeedList(state),
+  feedsLoading: feedsLoading(state),
 });
 
 const mapDispatchToProps = {

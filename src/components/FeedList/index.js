@@ -9,20 +9,23 @@ import PropTypes from 'prop-types';
 
 import FeedForm from '../FeedForm';
 import FeedItem from '../FeedItem';
+import LoadingIndicator from '../LoadingIndicator';
 
 import './FeedList.css';
 
-const FeedList = ({createFeed, deleteFeed, feeds, refreshFeed}) => {
-  let feedItems = feeds.map((feed, index) => {
-    return (
-      <FeedItem
-        deleteFeed={deleteFeed}
-        key={index}
-        feed={feed}
-        refreshFeed={refreshFeed}
-      />
-    );
-  });
+const FeedList = ({createFeed, deleteFeed, feeds, feedsLoading, refreshFeed}) => {
+  const feedItems = feedsLoading
+    ? <LoadingIndicator />
+    : feeds.map((feed, index) => {
+        return (
+          <FeedItem
+            deleteFeed={deleteFeed}
+            key={index}
+            feed={feed}
+            refreshFeed={refreshFeed}
+          />
+        );
+      });
 
   return (
     <aside className='FeedList'>
@@ -40,6 +43,7 @@ FeedList.propTypes = {
   createFeed: PropTypes.func.isRequired,
   deleteFeed: PropTypes.func.isRequired,
   feeds: PropTypes.instanceOf(List),
+  feedsLoading: PropTypes.bool,
   refreshFeed: PropTypes.func.isRequired
 };
 

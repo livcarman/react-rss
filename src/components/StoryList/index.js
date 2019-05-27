@@ -7,20 +7,23 @@ import { List } from 'immutable';
 import PropTypes from 'prop-types';
 
 import FeedStories from '../FeedStories';
+import LoadingIndicator from '../LoadingIndicator';
 
 import './StoryList.css';
 
-const StoryList = ({feeds}) => {
-  let feedStories = feeds
-    .filter((feed) => feed.stories.length > 0)
-    .map((feed, index) => {
-      return (
-        <FeedStories
-          key={index}
-          feed={feed}
-        />
-      );
-    });
+const StoryList = ({feeds, feedsLoading}) => {
+  const feedStories = feedsLoading
+    ? <LoadingIndicator />
+    : feeds
+        .filter((feed) => feed.stories.length > 0)
+        .map((feed, index) => {
+          return (
+            <FeedStories
+              key={index}
+              feed={feed}
+            />
+          );
+        });
 
   return (
     <div className='StoryList'>
@@ -30,6 +33,7 @@ const StoryList = ({feeds}) => {
 };
 
 StoryList.propTypes = {
+  feedsLoading: PropTypes.bool.isRequired,
   feeds: PropTypes.instanceOf(List),
 };
 

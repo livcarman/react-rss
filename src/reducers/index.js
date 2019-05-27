@@ -11,4 +11,4 @@
  */
 
 export { authReducer, getAuth, isAuthenticated } from './auth';
-export { feedReducer, getFeeds, getFeedList } from './feed';
+export { feedReducer, feedsLoading, getFeeds, getFeedList } from './feed';
