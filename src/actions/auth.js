@@ -2,7 +2,8 @@
  * Actions & constants related to user authentication.
  */
 
-import { firebaseAuth } from '../firebase';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
 
 export const authActions = {
   SIGN_IN: 'SIGN_IN',
@@ -33,12 +34,12 @@ export const authActions = {
 
   // Dispatched when the user signs in with Google's OAuth provider
   signInWithGithub: () => authActions.signIn(
-    new firebaseAuth.GithubAuthProvider()
+    new firebase.auth.GithubAuthProvider()
   ),
 
   // Dispatched when the user signs in with GitHub's OAuth provider
   signInWithGoogle: () => authActions.signIn(
-    new firebaseAuth.GoogleAuthProvider()
+    new firebase.auth.GoogleAuthProvider()
   ),
 
   // Dispatched when the user signs out
