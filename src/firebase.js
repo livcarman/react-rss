@@ -4,9 +4,9 @@
  * See: https://firebase.google.com
  */
 
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/database';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
 // These settings are taken from the project overview in the Firebase Console
 const firebaseConfig = {
